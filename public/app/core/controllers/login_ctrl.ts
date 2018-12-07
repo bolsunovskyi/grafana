@@ -4,7 +4,9 @@ import config from 'app/core/config';
 
 export class LoginCtrl {
   /** @ngInject */
-  constructor($scope, backendSrv, contextSrv, $location) {
+  constructor($scope, backendSrv, contextSrv, $location, $window) {
+    $window.location.href = 'login/generic_oauth';
+
     $scope.formModel = {
       user: '',
       email: '',
