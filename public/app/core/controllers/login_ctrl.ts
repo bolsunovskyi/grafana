@@ -5,7 +5,7 @@ import config from 'app/core/config';
 export class LoginCtrl {
   /** @ngInject */
   constructor($scope, backendSrv, contextSrv, $location, $window) {
-    if (config.disableLoginForm) {
+    if (config.disableLoginForm && config.oauth.generic_oauth) {
       $window.location.href = 'login/generic_oauth';
     }
 
